@@ -1,0 +1,25 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+@charset "utf-8";
+
+// Import partials from the `minima` theme.
+@import "minima";
+
+.site-title .site-logo {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background: url('/assets/trinary.group.png') no-repeat 0 0;
+    background-size: contain;
+    margin: 0 0.5rem 0 0;
+    vertical-align: middle;
+}
+
+.site-header {
+    border-bottom-color: #D5C8F7;
+}
+
+.post-title {
+    font-weight: 300;
+}
