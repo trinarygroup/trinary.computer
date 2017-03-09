@@ -9,6 +9,10 @@ url: "http://trinary.ru"
 github_username:  trinarygroup
 copyright: "Тринари"
 
+collections:
+  kb:
+    output: true
+
 yandex_metrika: 169671
 
 # Build settings

@@ -1,0 +1,24 @@
+---
+layout: default
+permalink: "/kb/"
+title: "Материалы"
+navigation_order: 1
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Материалы</h1>
+
+  <ul class="post-list">
+    {% for kb in site.kb %}
+      <li>
+        <span class="post-meta">{{ kb.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ kb.url | relative_url }}">{{ kb.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
