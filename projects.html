@@ -1,0 +1,22 @@
+---
+layout: default
+permalink: "/projects/"
+title: "Проекты"
+navigation_order: 1
+---
+
+<div class="home">
+
+  <h1 class="page-heading">Проекты</h1>
+
+  <ul class="post-list">
+    {% for project in site.projects %}
+      <li>
+        <h2>
+          <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+</div>
