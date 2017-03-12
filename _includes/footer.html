@@ -1,24 +1,21 @@
 <footer class="site-footer">
-
   <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+    <div class="footer-columns">
+      <div class="footer-column">
         <ul class="contact-list">
           <li>
             © {{ site.time | date: "%Y" }} {{ site.copyright | escape }}
-            </li>
-            {% if site.email %}
-            <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
-            {% endif %}
+          </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-2">
+      <div class="footer-column">
         <ul class="social-media-list">
           {% if site.github_username %}
-          <li>
-            {% include icon-github.html username=site.github_username %}
+          <li class="icon icon-github-circled">
+            <a href="https://github.com/{{ site.github_username }}">
+              {{ site.github_username }}
+            </a>
           </li>
           {% endif %}
 
@@ -27,15 +24,19 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+
+          {% if site.email %}
+          <li class="icon icon-mail-squared">
+            <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+          </li>
+          {% endif %}
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <div class="footer-column">
         <p>{{ site.exceprt | escape }}</p>
       </div>
     </div>
-
   </div>
-
 </footer>
 <script type="text/javascript" src="{{ "/assets/application.js" | relative_url }}"></script>

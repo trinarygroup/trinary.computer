@@ -5,6 +5,7 @@
 
 // Import partials from the `minima` theme.
 @import "minima";
+@import "icons";
 
 .site-title .site-logo {
     display: inline-block;
@@ -22,4 +23,16 @@
 
 .post-title {
     font-weight: 300;
+}
+
+.social-media-list {
+    white-space: nowrap;
+}
+
+.footer-columns {
+    display: flex;
+    justify-content: space-between;
+
+    .icon {
+    }
 }
