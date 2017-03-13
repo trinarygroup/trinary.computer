@@ -36,3 +36,27 @@
     .icon {
     }
 }
+
+.sidebar {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+.input-group {
+    margin: 0.25rem 0;
+}
+
+@media all and (min-width: 40rem) {
+    .machine-translator {
+        .form-label {
+            flex: 0 0 33%;
+            max-width: 33%;
+            padding: 0;
+        }
+        .form-control {
+            flex: 0 0 66%;
+            max-width: 66%;
+        }
+    }
+}

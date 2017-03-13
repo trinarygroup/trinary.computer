@@ -1,0 +1,63 @@
+---
+layout: project
+permalink: /projects/translator
+title: Калькулятор
+exerpt: "Перевод чисел в двоичную, троичную, восьмеричную, девятеричную, десятичную, шестнадцатеричную системы счисления"
+---
+<h5>
+Перевод чисел в двоичную, троичную, восьмеричную, девятеричную, десятичную, шестнадцатеричную системы счисления
+</h5>
+<form class="machine-translator" data-behavior="trinary-translator">
+    <fieldset>
+        <div class="row input-group">
+            <label class="column form-label" for="number_bin" title="binary">
+              Двоичная
+            </label>
+            <input class="form-control column" type="text" data-kind="binary" id="number_bin" placeholder="0 1">
+        </div>
+        <div class="row input-group">
+            <label class="column form-label" for="number_tri" title="trinary">
+              Троичная
+            </label>
+            <input class="form-control column" type="text" data-kind="trinary" id="number_tri" placeholder="- 0 +">
+        </div>
+        <div class="row input-group">
+            <label class="column form-label" for="number_oct" title="octonary">
+              Восьмеричная
+            </label>
+            <input class="form-control column" type="text" data-kind="octonary" id="number_oct" placeholder="0 1 2 3 4 5 6 7">
+        </div>
+        <div class="row input-group">
+            <label class="column form-label" for="number_non" title="nonary">
+              Девятеричная
+            </label>
+            <input class="form-control column" type="text" data-kind="nonary" id="number_non" placeholder="w x y z 0 1 2 3 4">
+        </div>
+        <div class="row input-group">
+            <label class="column form-label" for="number_dec" title="decimal">
+              Десятичная
+            </label>
+            <input class="form-control column" type="text" data-kind="decimal" id="number_dec" placeholder="0 1 2 3 4 5 6 7 8 9">
+        </div>
+        <div class="row input-group">
+            <label class="column form-label" for="number_hex" title="hexadecimal">
+              Шестнадцатеричная
+            </label>
+            <input class="form-control column" type="text" data-kind="hexadecimal" id="number_hex" placeholder="0 1 2 3 4 5 6 7 8 9  a b c d e f">
+        </div>
+    </fieldset>
+</form>
+
+<div class="sidebar">
+<p>Выводит число в разных системах счисления: двоичной (binary), троичной симметричной (trinary, ternary), девятеричной симметричной (nonary), десятичной (decimal) и шестнадцатеричной (hexadecimal).</p>
+<p>Для обозначения использются следующие символы:</p>
+<ul>
+    <li>Двоичная: 0, 1</li>
+    <li>Троичная: -, 0, +</li>
+    <li>Восьмеричная: 0–7</li>
+    <li>Девятеричная: w, x, y, z, 0—4</li>
+    <li>Десятичная: 0–9</li>
+    <li>Шестнадцатеричная: 0–9, a–f</li>
+</ul>
+</aside>
+</div>
