@@ -10,7 +10,8 @@ navigation_order: 1
   <h1 class="page-heading">Проекты</h1>
 
   <ul class="post-list">
-    {% for project in site.projects %}
+    {% assign projects = site.projects | sort: 'order' %}
+    {% for project in projects %}
       <li>
         <h2>
           <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
