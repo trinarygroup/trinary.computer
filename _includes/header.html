@@ -7,7 +7,7 @@
       {{ site.title | escape }}
     </a>
 
-    <nav class="site-nav">
+    <nav class="site-navigation">
       {% assign navigation_pages = site.pages | sort: 'navigation_order' %}
       {% for my_page in navigation_pages %}
         {% if my_page.title %}

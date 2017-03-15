@@ -23,6 +23,21 @@
     border-bottom-color: #D5C8F7;
 }
 
+.site-navigation {
+    float: right;
+    line-height: 56px;
+
+    .page-link {
+        color: $text-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the last one
+        &:not(:last-child) {
+        margin-right: 20px;
+        }
+    }
+}
+
 .post-title {
     font-weight: 300;
 }
@@ -48,6 +63,7 @@
 .input-group {
     margin: 0.25rem 0;
 }
+
 
 @media all and (min-width: 40rem) {
     .machine-translator {
