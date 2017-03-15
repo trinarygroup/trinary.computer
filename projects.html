@@ -16,6 +16,9 @@ navigation_order: 1
         <h2>
           <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
         </h2>
+        <p>
+          {{ project.excerpt }}
+        </p>
       </li>
     {% endfor %}
   </ul>
