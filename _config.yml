@@ -12,6 +12,8 @@ copyright: "Тринари"
 collections:
   kb:
     output: true
+  static_pages:
+    output: true
   projects:
     output: true
 

@@ -1,0 +1,388 @@
+#setunws.original {
+
+    svg * {
+        font-size: 0.9em;
+    }
+
+    svg {
+        overflow: visible;
+        display: block;
+        margin: 0 0 10px 0;
+        font-size: 1em;
+        font-family: Monaco, Consolas, "Liberation Mono", Courier, monospace;
+        background: #f7f7f7;
+        border-radius: 5px;
+        width: 100% !important;
+        height: 100% !important;
+        }
+
+        svg text { text-anchor: middle; }
+
+        .bulb circle {
+            fill: #ccc;
+            stroke: #000;
+            stroke-width: 1;
+            }
+        .bulb ellipse {
+            fill: #f2f3f7;
+            stroke: #555;
+            stroke-width: 1;
+            }
+
+        .indicator circle {
+            }
+        .indicator[value="+"] .bulb:first-child .glass { fill: #ff0; }
+        .indicator[value="-"] .bulb .glass { fill: #ff0; }
+        .indicator[value="-"] .bulb:first-child .glass { fill: #f2f3f7; }
+        .indicator text {
+            fill: #555;
+            font-size: 0.8em;
+            text-anchor: middle;
+            }
+
+    .register > text {
+        font-size: 1.2em;
+        font-weight: bold;
+        text-anchor: end;
+        }
+
+    .switcher { cursor: pointer; }
+        .switcher .place {
+            fill: #eee;
+            stroke: #000;
+            stroke-width: 0.5;
+            }
+        .switcher .position { opacity: 0; }
+            .switcher .position circle {
+                fill: #999;
+                stroke: #000;
+                }
+            .switcher .position ellipse {
+                fill: #ccc;
+                stroke: #333;
+                }
+            .switcher .position polyline {
+                fill: #999;
+                stroke: #000;
+                stroke-width: 1;
+                }
+            .switcher .position[name="0"] ellipse {
+                fill: #ccc;
+                }
+            .switcher .position[name="-"] circle {
+                fill: #ccc;
+                }
+            .switcher .position[name="-"] ellipse {
+                fill: #999;
+                }
+            .switcher .position[name="-"] polyline {
+                fill: #ccc;
+                }
+        .switcher .position[name="0"] { opacity: 1; }
+        .switcher[value="+"] .position[name="+"] { opacity: 1; }
+        .switcher[value="+"] .position[name="0"] { opacity: 0; }
+        .switcher[value="-"] .position[name="-"] { opacity: 1; }
+        .switcher[value="-"] .position[name="0"] { opacity: 0; }
+
+    .switcher-set > text { text-anchor: start; }
+
+    .modeswitcher {}
+        .modeswitcher text {}
+        .modeswitcher[value="+"] .position[name="+"] { opacity: 1; }
+        .modeswitcher[value="+"] .position[name="0"] { opacity: 0; }
+        .modeswitcher[value="-"] .position[name="-"] { opacity: 1; }
+        .modeswitcher[value="-"] .position[name="0"] { opacity: 0; }
+
+        .modeswitcher[value="+"] .bulb ellipse { fill: #ff0; }
+
+
+        .switcher  text {
+            text-anchor: middle;
+            }
+
+    .bi-switcher[value="+"] .bulb ellipse { fill: #ff0; }
+
+    .tri-switcher {}
+        .tri-switcher .bulb { cursor: auto; }
+        .tri-switcher[value="-"] .bulb[value="-"] ellipse { fill: #ff0; }
+        .tri-switcher[value="+"] .bulb[value="+"] ellipse { fill: #ff0; }
+        .tri-switcher text {
+            text-anchor: middle;
+            }
+
+    .button {
+        }
+        .button circle {
+            fill: #e00;
+            stroke: #555;
+            stroke-width: 3;
+            cursor: pointer;
+            }
+            .button[disabled=disabled] circle {
+                fill: #900;
+                cursor: auto;
+                }
+        .button text {
+            text-anchor: middle;
+            }
+
+    .clock {}
+        .clock circle {
+            stroke: #555;
+            stroke-width: 1;
+            fill: #fff;
+            }
+        .clock .border { fill: #fff; }
+        .clock text {
+            dominant-baseline: middle;
+            }
+        .clock polyline {
+            fill: #333;
+            stroke-width: 1;
+            stroke: #555;
+            }
+
+
+    log {
+        display: block;
+        overflow: auto;
+        margin: 0 0 10px;
+        padding: 0.5em;
+        height: 5em;
+        width: 100%;
+        border: 1px solid #ccc;
+        font-family: "courier new";
+        float: left;
+        }
+
+        log success { color: #090; }
+        log faild { color: #d00; }
+
+        hr {
+            clear: both;
+            display: block;
+            margin: 0 0 1em 0;
+            border: 0;
+            border-bottom: solid 1px #999;
+            }
+
+        control {
+            display: block;
+            margin: 0 0 1em 0;
+            }
+            control button {
+                width: 12em;
+                }
+
+
+    label {
+        display: block;
+        text-align: center;
+        padding: 0.3em 0;
+        background: #f0f0f0;
+        }
+
+    memory,
+    .printer,
+    console {
+        display: block;
+        float: left;
+        margin: 0 1em 1em 0;
+        padding: 0 0 0.5em;
+        border: solid 1px #ccc;
+        border-radius: 5px;
+        }
+
+    memory {
+        clear: both;
+        }
+        memory bank {
+            display: block;
+            float: left;
+            overflow: hidden;
+            overflow-y: scroll;
+            margin: 0 1em 0 0;
+            padding: 0 0.5em 0 0;
+            height: 10em;
+            }
+            memory bank:last-child {
+                margin: 0;
+                }
+            memory cell {
+                display: table-row;
+                font-family: monospace;
+                letter-spacing: 0.1em;
+                }
+                memory cell label {
+                    display: table-cell;
+                    padding: 0;
+                    width: 4em;
+                    background: none;
+                    }
+                memory cell input {
+                    display: table-cell;
+                    width: 8em;
+                    border: 1px dotted #ccc;
+                    background: transparent;
+                    letter-spacing: 0.1em;
+                    text-align: center;
+                    border-radius: 2px;
+                    }
+
+    ft {
+        display: block;
+        float: left;
+        font-size: 0.8em;
+        margin: 0 1em 0 0;
+        }
+        ft label {
+            display: block;
+            margin: 0 0 5px;
+            width: 10em;
+            text-align: center;
+            }
+        ft device,
+        ft textarea {
+            display: block;
+            overflow: hidden;
+            overflow-y: scroll;
+            padding: 0 0 0 0.3em;
+            width: 11em;
+            font-family: "lucida console", monospace;
+            letter-spacing: 0.3em;
+            font-size: 1em;
+            border: solid 1px #ccc;
+            }
+        ft device {
+            height: 10em;
+            }
+        ft textarea {
+            margin: 0 0 5px;
+            height: 150px;
+            border-radius: 3px;
+            }
+        ft button {
+            font-size: .8rem;
+            height: 2.8rem;
+            line-height: 2.8rem;
+            padding: 0 1.5rem;
+            }
+
+    .output {
+        display: block;
+        overflow: hidden;
+        overflow-y: scroll;
+        padding: 0.5em;
+        width: 100px;
+        height: 150px;
+        }
+
+    .printer {
+        }
+
+    console {
+        }
+        console .output {
+            width: 22em;
+            }
+
+}
+
+
+#setunws {
+    display: block;
+
+    a {
+        text-decoration: none;
+        border-bottom: 1px solid #369;
+        }
+    textarea {
+        font-family: monospace;
+        font-size: 8pt;
+        width: 180px;
+        height: 240px;
+        border: 1px solid #777;
+        padding: 0 0 0 4px;
+        }
+    .control {
+        margin: 0 0 10px;
+        }
+        .control a {
+            margin: 0 10px 0 0;
+            text-decoration: none;
+            color: #039;
+            border-bottom: 1px solid #039;
+            }
+
+    .registers {
+        float: left;
+        margin: 0 20px 0 0;
+        }
+        .registers ul {
+            list-style: none;
+            padding: 0 4px;
+            }
+        .registers li * {
+            font-family: monospace;
+            }
+    .memory {
+        clear: both;
+        overflow: hidden;
+        width: 600px;
+        }
+        .bank {
+            float: left;
+            overflow: hidden;
+            overflow-y: scroll;
+            margin: 0;
+            padding: 0 4px;
+            width: 190px;
+            height: 150px;
+            border: 1px solid #ccc;
+            list-style: none;
+            }
+            .bank * {
+                font-family: monospace;
+                }
+            .bank dfn {
+                color: #777;
+                }
+            .bank .non {
+                padding: 0 0 0 15px;
+                }
+    .printer {
+        float: left;
+        margin: 0 20px 0 0;
+        }
+        .printer .output {
+            width: 150px;
+            height: 100px;
+            overflow: hidden;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            }
+
+    .ft {
+        float: left;
+        margin: 0 10px 0 0;
+        }
+        .ft textarea {
+            padding: 2px;
+            width: 110px;
+            height: 100px;
+            }
+        .ft button {
+            display: block;
+            }
+
+    .console {
+        font-family: monospace;
+        white-space: pre;
+        width: 600px;
+        height: 140px;
+        overflow: auto;
+        overflow-x: scroll;
+        border: 1px solid #ccc;
+        }
+
+}

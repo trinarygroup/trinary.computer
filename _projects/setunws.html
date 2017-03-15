@@ -1,0 +1,24 @@
+---
+layout: project
+permalink: /projects/setunws/
+title: Сетунь ВС — эмулятор троичной советской МЦВМ «Сетунь»
+excerpt: "Программный онлайн эмулятор троичной советской МЦВМ «Сетунь»"
+order: 1
+---
+
+<ul class="list-unstyled">
+    <li>
+        <a href="/projects/setunws/quick-start">Быстрый старт</a>
+    </li>
+    <li>
+        <a href="/projects/setunws/documentation">Руководство</a>
+    </li>
+</ul>
+
+<div id="setunwsplaceholder"></div>
+
+<script type="text/javascript">
+    trinary.setunws.power();
+    $('#setunwsplaceholder').append(trinary.setunws.uiss.root);
+    trinary.setunws.run();
+</script>
