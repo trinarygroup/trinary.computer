@@ -1,0 +1,32 @@
+---
+layout: content
+permalink: /projects/sinchron/fullscreen
+title: "Синхрон"
+excerpt: "Троичные аналоговые часы"
+---
+<style type="text/css">
+    body, html {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+</style>
+<canvas id="trinary-clock-sinchron"></canvas></a>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+    function sinchron() {
+        var body = document.getElementsByTagName('body')[0];
+        var placeholder = document.getElementById('trinary-clock-sinchron');
+        var tc = new trinary.clock.Sinchron(placeholder, body.clientWidth, body.clientHeight);
+        tc.sinus.hour.amplitude = 0.7;
+        tc.sinus.minute.amplitude = 0.4;
+        tc.sinus.second.amplitude = 0.2;
+        tc.sinus.millisecond.amplitude = 0.1;
+        tc.canvas();
+    };
+    sinchron();
+});
+//]]>
+</script>
+

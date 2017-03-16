@@ -1,0 +1,65 @@
+---
+layout: project
+permalink: /projects/sinchron/
+title: "Троичные аналоговые часы «Синхрон»"
+excerpt: ""
+order: 3
+---
+<a href="/projects/sinchron/fullscreen"><canvas id="trinary-clock-sinchron-canvas" width="300" height="150"></canvas></a>
+<script type="text/javascript">
+//<![CDATA[
+$(document).ready(function(){
+    var tc = new trinary.clock.Sinchron($("#trinary-clock-sinchron-canvas")[0]);
+    tc.sinus.hour.amplitude = 0.97;
+    tc.sinus.minute.amplitude = 0.65;
+    tc.sinus.second.amplitude = 0.35;
+    tc.sinus.millisecond.amplitude = 0.1;
+    tc.canvas();
+});
+//]]>
+</script>
+<h4>
+  Немного теории
+</h4>
+<p>
+  В сутках 24 часа. Разделим  день на две половины. С полуночи до 12 часов дня день нарастает — идёт  положительный отсчет часов: 1,2,3..12. После полудня день начинает убывать,  соответственно начинается отсчет количества часов оставшихся до конца дня. Например, значение -3 часа  означает, что до полуночи осталось 3 часа, другими словами 9 часов вечера  (21:00). Таким образом, вместо  привычного отсчёта часов от 0 до 24, получаем диапазон от -11 до 0 и от 0 до  12.
+</p>
+<p>
+  Значение времени на часах «Синхрон»  определяется положением кривых. Так впадина в центре означает начало  диапазона, пик в центре — середину. Отрезок от впадины до центра рост, от пика  к падине уменьшение значений.
+</p>
+<p>
+  Всего часы используют 4  кривых: часы, минуты, секунды, миллисекунды. Кривые различаются цветом и  амплитудой.
+</p>
+<h4>
+  Кривая часов
+</h4>
+<p>
+  <img alt="Час" src="{{ "/assets/images/trinary.clock.sinchron.guide.hour.png" | relative_url }}">
+</p>
+<h4>
+  Кривая минут
+</h4>
+<p>
+  <img alt="Минута" src="{{ "/assets/images/trinary.clock.sinchron.guide.min.png" | relative_url }}">
+</p>
+<h4>
+  Кривая секунд
+</h4>
+<p>
+  <img alt="Секунда" src="{{ "/assets/images/trinary.clock.sinchron.guide.sec.png" | relative_url }}">
+</p>
+<h4>
+  Кривая милисекунд
+</h4>
+<p>
+  <img alt="Милисекунда" src="{{ "/assets/images/trinary.clock.sinchron.guide.msec.png" | relative_url }}">
+</p>
+<h4>
+  Пример
+</h4>
+<p>
+  <img alt="Пример" src="{{ "/assets/images/trinary.clock.sinchron.guide.sample.png" | relative_url }}">
+</p>
+<p>
+  На привёденном рисунке значение времени: 12 часов дня, 15 минут, 37 секунд, 0 миллисекунд.
+</p>
