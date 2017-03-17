@@ -8,6 +8,7 @@
 @import "icons";
 
 @import "setunws";
+@import "calendar";
 
 .site-title {
     &:hover {
@@ -126,5 +127,13 @@
         .node circle { fill: #ddd; stroke: #333; }
         .node text { fill: #333; font-size: 10px; }
         .garden .grid { stroke: #ccc; stroke-dasharray: 1,3; }
+    }
+}
+
+.calendar-params {
+    margin: 0 0 2rem;
+
+    select {
+        width: auto;
     }
 }

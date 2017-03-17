@@ -1,0 +1,133 @@
+.calendar {
+    td, td {
+        border: none;
+    }
+    .year {
+        color: #f50;
+        }
+    .month {
+        }
+    .month-name {
+        padding-left: 7px;
+        text-align: left;
+        color: #888a85;
+        }
+    .day {
+        text-align: right;
+        font-size: 12px;
+        font-family: Menlo, DejaVu Sans Mono, Courier New, monospace;
+        padding: 2px 7px;
+        }
+    .day-names .day {
+        color: #888a85;
+        font-family: inherit;
+        font-size: 11px;
+        padding: 2px 0;
+        text-align: center;
+        }
+    .holyday,
+    .holyday {
+        color: #FF4A08;
+        }
+    .highlight,
+    .highlight {
+        background: #FF4A08;
+        border-radius: 2px;
+        color: #fff;
+        }
+
+    .calendar-month {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 20px 20px 0;
+    }
+}
+
+.calendar.nonary {
+    .day,
+    .year {
+        text-transform: uppercase;
+        }
+    .day-names .day {
+        text-transform: none;
+        }
+}
+
+.calendar.trinary.triangle {
+    line-height: 0;
+
+    .day {
+        width: 40px;
+        padding: 0;
+        text-align: right;
+    }
+
+    .sign-view {
+        font-size: 0px;
+        display: inline-block;
+        vertical-align: top;
+        }
+    .sign-view.zero {
+        font-size: 0;
+        padding: 0;
+        }
+    .sign-view.minus {
+        border: 0;
+        border-left: 10px solid #1393FF;
+        border-top: 10px solid #D4ECFF;
+        }
+
+    .sign-view.plus {
+        border: 0;
+        border-right: 10px solid #1393FF;
+        border-bottom: 10px solid #D4ECFF;
+        }
+
+
+    .year {
+        .sign-view {
+            line-height: 0;
+            border-top-width: 45px;
+            border-left-width: 45px;
+            }
+        .sign-view.minus {
+            border-left-width: 45px;
+            border-top-width: 45px;
+            }
+        .sign-view.plus {
+            border-right-width: 45px;
+            border-bottom-width: 45px;
+            }
+    }
+
+    .calendar-month {
+        margin: 0 30% 0 0;
+    }
+
+    .month-name {
+        margin: 0 0 10px;
+        display: none;
+        }
+
+    .day.holyday {}
+    .day.holyday .sign-view {
+        }
+        .day.holyday .sign-view.minus {
+            border-color: #DEC1E8;
+            border-left: 10px solid #AE06E8;
+            }
+        .day.holyday .sign-view.plus {
+            border-color: #DEC1E8;
+            border-right-color: #AE06E8;
+            }
+        .day.holyday .sign-view.zero {
+            border-color: #DEC1E8;
+
+            }
+
+    .day-names {
+        display: none;
+        line-height: 14px;
+        }
+
+}

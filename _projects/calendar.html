@@ -1,0 +1,44 @@
+---
+layout: default
+permalink: /projects/calendar/
+title: Календарь
+excerpt: "Календарь на год в троичной и девятеричной системах счисления."
+order: 10
+---
+<div class="calendar-params">
+    Календарь на <select id="calendar_year"></select> год в
+    <select id="calendar_style">
+        <option value="trinary">троичной симметричной</option>
+        <option value="nonary">девятеричной симметричной</option>
+    </select> системе
+</div>
+
+<div id="calendar_container"></div>
+
+<script type="text/javascript">
+//<![CDATA[
+$(window).ready(function(){
+    var instance = $('#calendar_container');
+    var calendar_year = $('#calendar_year');
+    var calendar_style = $('#calendar_style');
+
+    var currentYear = new Date().getFullYear();
+    var dates = [currentYear - 1, currentYear, currentYear + 1];
+    dates.forEach(function(item) {
+        var selected = (currentYear == item) ? 'selected' : '';
+        calendar_year.append('<option value="' + item + '"' + selected + '>' + item + '</option>')
+    })
+
+    function render() {
+        var style = calendar_style.val().split('/');
+        var options = { year : parseInt(calendar_year.val()), system : style[0], style : style[1] };
+        instance.html(new trinary.calendar.Calendarium(options).render());
+    };
+
+    calendar_year.change(render);
+    calendar_style.change(render);
+
+    render();
+});
+//]]>
+</script>
