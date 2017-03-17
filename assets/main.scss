@@ -9,14 +9,20 @@
 
 @import "setunws";
 
-.site-title .site-logo {
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    background: url('/assets/trinary.group.png') no-repeat 0 0;
-    background-size: contain;
-    margin: 0 0.5rem 0 0;
-    vertical-align: middle;
+.site-title {
+    &:hover {
+        text-decoration: none;
+    }
+
+    .site-logo {
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+        background: url('/assets/trinary.group.png') no-repeat 0 0;
+        background-size: contain;
+        margin: 0 0.5rem 0 0;
+        vertical-align: middle;
+    }
 }
 
 .site-header {
