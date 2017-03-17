@@ -14,7 +14,7 @@ navigation_order: 1
     {% for project in projects %}
       <li>
         <h2>
-          <a class="post-link" href="{{ project.url | relative_url }}">{{ project.title | escape }}</a>
+          <a class="post-link" href="{{ project.url | relative_url }}">{{ project.name | escape }}</a>
         </h2>
         <p>
           {{ project.excerpt }}
