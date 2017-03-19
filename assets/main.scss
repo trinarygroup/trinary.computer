@@ -137,3 +137,30 @@
         width: auto;
     }
 }
+
+.tr-sidebar-section {
+    margin: 0 0 30px;
+
+    .tr-sidebar-section-header {
+        margin: 0 0 10px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+}
+
+.machine-translator.translator-lite {
+    .input-group {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .translator-label {
+        font-weight: 400;
+        line-height: 2.5em;
+        width: 5rem;
+    }
+
+    .form-control {
+        width: 100%;
+    }
+}

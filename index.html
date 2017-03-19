@@ -1,0 +1,83 @@
+---
+layout: page
+header: "Троичная логика и троичная цифровая техника"
+---
+<div class="row">
+    <div class="col-sm-6 col-md-7 col-lg-8">
+        <p>
+        Троичная симметричная система счисления — позиционная целочисленная система счисления по основанию 3 со значениями -1, 0, +1 (для записи используются символы: +, 0, -). <a href="/kb/04b1e68c-7add-426d-bed3-a0dab0ec452d">Самая экономичная</a> среди целочисленных позиционных систем.</p>
+        <p>
+        Ключевая особенность троичной симметричной системы — наличие знака числа в самом алфавите:
+        </p><ul class="marked">
+        <li>однозначно определяется знак числа по самому числу;</li>
+        <li>простота выполнения арифметических операций;</li>
+        <li>механизм округления чисел простым отбрасыванием младших разрядов.</li>
+        </ul>
+        (См. <a href="/kb/3d3703c1-75fb-4bf8-9041-a27d34a30508">Троичная арифметика</a>)
+        <p></p>
+        <p><a href="/kb/5267fd6d-6395-49ec-a9b7-e10709c83995">Использование троичного кода и трехзначной логики в компьютерах</a> имеет неоспоримое преимущество перед двоичными системами, что было продемонстрировано эксплуатацией троичного компьютера Сетунь. Эффективность троичной логики в языках программирования была реализована в ДССП.
+        </p>
+    </div>
+    <div class="col-sm-6 col-md-5 col-lg-4">
+        <section class="tr-sidebar-section">
+            <h3 class="tr-sidebar-section-header">
+                <a href="/projects/translator">Троичный калькулятор</a>
+            </h3>
+            <div class="machine-translator translator-lite" data-behavior="trinary-translator">
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_bin" title="Двоичная">Bin</label><input class="input-sm form-control" data-kind="binary" id="number_bin" placeholder="0 1" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_tri" title="Троичная">Tri</label><input class="input-sm form-control" data-kind="trinary" id="number_tri" placeholder="- 0 +" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_oct" title="Восьмеричная">Oct</label><input class="input-sm form-control" data-kind="octonary" id="number_oct" placeholder="0 1 2 3 4 5 6 7" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_non" title="Девятеричная">Non</label><input class="input-sm form-control" data-kind="nonary" id="number_non" placeholder="w x y z 0 1 2 3 4" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_dec" title="Десятичная">Dec</label><input class="input-sm form-control" data-kind="decimal" id="number_dec" placeholder="0 1 2 3 4 5 6 7 8 9" type="text">
+                </div>
+                <div class="input-group">
+                    <label class="input-group-addon translator-label" for="number_hex" title="Шестнадцатеричная">Hex</label><input class="input-sm form-control" data-kind="hexadecimal" id="number_hex" placeholder="0 1 2 3 4 5 6 7 8 9  a b c d e f" type="text">
+                </div>
+            </div>
+        </section>
+        <section class="tr-sidebar-section" id="trinary-clock-sinchron-section">
+            <h3 class="tr-sidebar-section-header">
+                <a href="/projects/sinchron">Троичные часы «Синхрон»</a>
+            </h3>
+            <a href="/projects/sinchron/fullscreen"><canvas id="trinary-clock-sinchron-canvas" width="300" height="150"></canvas></a>
+            <script type="text/javascript">
+            //<![CDATA[
+            $(document).ready(function(){
+                var section = document.getElementById('trinary-clock-sinchron-section');
+                var placeholder = document.getElementById('trinary-clock-sinchron-canvas');
+                var tc = new trinary.clock.Sinchron(placeholder, section.clientWidth, 150);
+                tc.sinus.hour.amplitude = 0.97;
+                tc.sinus.minute.amplitude = 0.65;
+                tc.sinus.second.amplitude = 0.35;
+                tc.sinus.millisecond.amplitude = 0.1;
+                tc.canvas();
+            });
+            //]]>
+            </script>
+        </section>
+        <section class="tr-sidebar-section">
+            <h3 class="tr-sidebar-section-header">
+                <a href="/projects/calendar">Троичный календарь</a>
+            </h3>
+            <div id="calendar_container"></div>
+            <script type="text/javascript">
+            //<![CDATA[
+            $(window).ready(function(){
+            var calendarium = new trinary.calendar.Calendarium();
+            var today = new Date();
+            var monthCalendar = calendarium.renderMonth(today.getFullYear(), today.getMonth() + 1, [today.getDate()]);
+            $('#calendar_container').html(calendarium.wrap(monthCalendar));
+            })
+            </script>
+        </section>
+    </div>
+</div>
