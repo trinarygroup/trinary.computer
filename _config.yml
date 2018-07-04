@@ -24,7 +24,7 @@ sass:
   sass_dir: assets/scss
 markdown: kramdown
 theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
