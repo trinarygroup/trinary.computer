@@ -2,17 +2,28 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ "/" | relative_url}}">
-      <span class="site-logo"></span>
+    <a class="site-title" href="{{ " /" | relative_url}}">
+      <svg class="site-logo" width="29" height="29" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd"
+          d="M1.41421 0H0L1 1L18 18L19 19L20 20L37 37L38 38V36.5858V20V19V17.5858V1V0H37H20.4142H19H18H1.41421ZM19 0L20 1L37 18L38 19H37H20.4142H19V17.5858V1V0ZM2.41421 1L18 16.5858V1H2.41421ZM21.4142 1L37 16.5858V1H21.4142ZM37 35.5858L21.4142 20H37V35.5858Z"
+          fill="url(#gr)" />
+        <defs>
+          <linearGradient id="gr" x1="19" y1="0" x2="19" y2="38" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3A0897" />
+            <stop offset="1" stop-color="#E0609A" />
+          </linearGradient>
+        </defs>
+      </svg>
+
       {{ site.title | escape }}
     </a>
 
     <nav class="site-navigation">
       {% assign navigation_pages = site.pages | sort: 'navigation_order' %}
       {% for my_page in navigation_pages %}
-        {% if my_page.title %}
-        <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
-        {% endif %}
+      {% if my_page.title %}
+      <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+      {% endif %}
       {% endfor %}
     </nav>
 

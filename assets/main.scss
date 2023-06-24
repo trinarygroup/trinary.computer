@@ -10,6 +10,10 @@
 @import "setunws";
 @import "calendar";
 
+body {
+  font-family: Ubuntu, SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
 .site-title {
     &:hover {
         text-decoration: none;
@@ -17,17 +21,14 @@
 
     .site-logo {
         display: inline-block;
-        width: 32px;
-        height: 32px;
-        background: url('/assets/trinary.group.png') no-repeat 0 0;
-        background-size: contain;
-        margin: 0 0.5rem 0 0;
+        margin: 0 0.5rem 0 -0.5rem;
         vertical-align: middle;
     }
 }
 
 .site-header {
-    border-bottom-color: #D5C8F7;
+    border-top-color: #3A0897;
+    border-bottom-color: #E0609A;
 }
 
 .site-navigation {
