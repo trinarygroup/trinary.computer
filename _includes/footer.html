@@ -1,10 +1,11 @@
+{% assign locale = site.data.[page.lang] %}
 <footer class="site-footer">
   <div class="wrapper">
     <div class="footer-columns">
       <div class="footer-column">
         <ul class="contact-list">
           <li>
-            © {{ site.time | date: "%Y" }} {{ site.copyright | escape }}
+            © {{ site.time | date: "%Y" }} {{ locale.copyright | escape }}
           </li>
         </ul>
       </div>
@@ -19,12 +20,6 @@
           </li>
           {% endif %}
 
-          {% if site.twitter_username %}
-          <li>
-            {% include icon-twitter.html username=site.twitter_username %}
-          </li>
-          {% endif %}
-
           {% if site.email %}
           <li class="icon icon-mail-squared">
             <a href="mailto:{{ site.email }}">{{ site.email }}</a>
@@ -34,7 +29,7 @@
       </div>
 
       <div class="footer-column">
-        <p>{{ site.exceprt | escape }}</p>
+        <p>{{ locale.excerpt | default: site.excerpt | escape }}</p>
       </div>
     </div>
   </div>

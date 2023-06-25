@@ -1,34 +1,29 @@
 ---
 layout: page
-header: "Троичная логика и троичная цифровая техника"
+lang: en
+header: "Ternary logic and ternary computers"
 ---
-
-{% assign projects = site.en %}
-{% for project in projects %}
-  *: {{ project.permalink }}
-{% endfor %}
-
-
 <div class="row">
     <div class="col-sm-6 col-md-7 col-lg-8">
         <p>
-        Троичная симметричная система счисления — позиционная целочисленная система счисления по основанию 3 со значениями -1, 0, +1 (для записи используются символы: +, 0, -). <a href="/kb/04b1e68c-7add-426d-bed3-a0dab0ec452d">Самая экономичная</a> среди целочисленных позиционных систем.</p>
+        The ternary symmetric number system is a positional integer numeral system with a base of 3 and values of -1, 0, +1 (the symbols used are: +, 0, -). It is the <a href="/kb/04b1e68c-7add-426d-bed3-a0dab0ec452d">most efficient</a> among the integer positional systems.
+        </p>
         <p>
-        Ключевая особенность троичной симметричной системы — наличие знака числа в самом алфавите:
+        The key feature of the ternary symmetric system is the inclusion of the sign of the number in the alphabet itself:
         </p><ul class="marked">
-        <li>однозначно определяется знак числа по самому числу;</li>
-        <li>простота выполнения арифметических операций;</li>
-        <li>механизм округления чисел простым отбрасыванием младших разрядов.</li>
+        <li>the sign of the number is clearly defined by the number itself;</li>
+        <li>ease of performing arithmetic operations;</li>
+        <li>rounding off numbers is easily achieved by simply discarding the less significant digits.</li>
         </ul>
-        (См. <a href="/kb/3d3703c1-75fb-4bf8-9041-a27d34a30508">Троичная арифметика</a>)
+        (See <a href="/kb/3d3703c1-75fb-4bf8-9041-a27d34a30508">Ternary arithmetic</a>)
         <p></p>
-        <p><a href="/kb/5267fd6d-6395-49ec-a9b7-e10709c83995">Использование троичного кода и трехзначной логики в компьютерах</a> имеет неоспоримое преимущество перед двоичными системами, что было продемонстрировано эксплуатацией троичного компьютера Сетунь. Эффективность троичной логики в языках программирования была реализована в ДССП.
+        <p>The <a href="/kb/5267fd6d-6395-49ec-a9b7-e10709c83995">use of ternary code and three-valued logic in computers</a> has an undeniable advantage over binary systems, which was demonstrated by the operation of the ternary computer Setun. The efficiency of ternary logic in programming languages was implemented in DSSP.
         </p>
     </div>
     <div class="col-sm-6 col-md-5 col-lg-4">
         <section class="tr-sidebar-section">
             <h3 class="tr-sidebar-section-header">
-                <a href="/projects/translator">Троичный калькулятор</a>
+                <a href="/projects/translator">Ternary Base Converter</a>
             </h3>
             <div class="machine-translator translator-lite" data-behavior="trinary-translator">
                 <div class="input-group">
@@ -53,7 +48,7 @@ header: "Троичная логика и троичная цифровая те
         </section>
         <section class="tr-sidebar-section" id="trinary-clock-sinchron-section">
             <h3 class="tr-sidebar-section-header">
-                <a href="/projects/sinchron">Троичные часы «Синхрон»</a>
+                <a href="/projects/sinchron">Ternary clock "Sinchron"</a>
             </h3>
             <a href="/projects/sinchron/fullscreen"><canvas id="trinary-clock-sinchron-canvas" width="300" height="150"></canvas></a>
             <script type="text/javascript">
@@ -73,7 +68,7 @@ header: "Троичная логика и троичная цифровая те
         </section>
         <section class="tr-sidebar-section">
             <h3 class="tr-sidebar-section-header">
-                <a href="/projects/calendar">Троичный календарь</a>
+                <a href="/projects/calendar">Ternary calendar</a>
             </h3>
             <div id="calendar_container"></div>
             <script type="text/javascript">

@@ -1,0 +1,11 @@
+title: "Trinary"
+excerpt: "Ternary logic and ternary computers"
+description: >
+  Development of ternary computer systems, information processing algorithms and ternary logic system, creation of a ternary structured programming system. Projects: Setun emulator, coding systems, chronometers, DSSP. Coverage of events in the field of ternary computing and logic. Publication of materials on the ternary symmetric number system, history of ternary computing.
+copyright: "Trinary"
+
+navigation:
+  - title: "Projects"
+    url: "/projects/"
+  - title: "Knowledge Base"
+    url: "/kb/"

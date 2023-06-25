@@ -1,16 +1,17 @@
 ---
 layout: default
 permalink: "/projects/"
-title: "Проекты"
+title: "Projects"
+lang: en
 navigation_order: 1
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Проекты</h1>
+  <h1 class="page-heading">Projects</h1>
 
   <ul class="post-list">
-    {% assign projects = site.en_projects | sort: 'order' %}
+    {% assign projects = site.en | sort: 'order' %}
     {% for project in projects %}
       <li>
         <h2>

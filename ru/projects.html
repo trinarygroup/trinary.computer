@@ -10,7 +10,7 @@ navigation_order: 1
   <h1 class="page-heading">Проекты</h1>
 
   <ul class="post-list">
-    {% assign projects = site.ru_projects | sort: 'order' %}
+    {% assign projects = site.ru | where_exp:"item","item.path contains '/projects/'"  | sort: 'order' %}
     {% for project in projects %}
       <li>
         <h2>

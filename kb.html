@@ -1,16 +1,18 @@
 ---
 layout: default
 permalink: "/kb/"
-title: "Материалы"
+lang: en
+title: "Knowledge base"
 navigation_order: 2
 ---
 
 <div class="home">
 
-  <h1 class="page-heading">Материалы</h1>
+  <h1 class="page-heading">Knowledge base</h1>
 
   <ul class="post-list">
-    {% for kb in site.kb %}
+    {% assign kb_items = site.ru | where_exp:"item","item.path contains '/kb/'"  | sort: 'order' %}
+    {% for kb in kb_items %}
       <li>
         <span class="post-meta">{{ kb.date | date: "%b %-d, %Y" }}</span>
 

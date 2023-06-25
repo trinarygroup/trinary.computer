@@ -1,3 +1,4 @@
+{% assign locale = site.data.[page.lang] %}
 <header class="site-header" role="banner">
 
   <div class="wrapper">
@@ -19,8 +20,7 @@
     </a>
 
     <nav class="site-navigation">
-      {% assign navigation_pages = site.navigation.en %}
-      {% for my_page in navigation_pages %}
+      {% for my_page in locale.navigation %}
       {% if my_page.title %}
       <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
       {% endif %}
