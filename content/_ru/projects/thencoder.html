@@ -1,0 +1,112 @@
+---
+layout: project
+permalink: /projects/thencoder/
+title: "Кодирование в троичный экономный код по алгоритму Хаффмана"
+name: "Кодирующее устройство №2"
+excerpt: "Кодирование в троичный экономный код по алгоритму Хаффмана. Двоичные и троичные кодовые деревья. Вычисление префиксных кодов"
+order: 5
+---
+<div class="application-thencoder">
+  <div class="tr-form">
+    <h4>
+      Введите кодируемый текст
+    </h4>
+    <textarea class="form-control" id="encodesource">голограмма</textarea><button class="btn btn-primary pull-right" id="encode">Закодировать</button>
+  </div>
+  <div class="encoded-results">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6 tree binary">
+        <h4 class="tr-diagram-header">
+          Двоичное кодовое дерево
+        </h4>
+        <div class="tr-diagram" id="btree"></div>
+      </div>
+      <div class="col-sm-6 col-md-6 col-lg-6 tree trinary">
+        <h4 class="tr-diagram-header">
+          Троичное кодовое дерево
+        </h4>
+        <div class="tr-diagram" id="ttree"></div>
+      </div>
+    </div>
+    <div class="symbols">
+      <table class="table table-striped table-condensed table-bordered">
+        <thead>
+          <tr class="header">
+            <th rowspan="2">
+              Символ
+            </th>
+            <th rowspan="2">
+              Частота
+            </th>
+            <th colspan="2">
+              Длины префиксных кодов
+            </th>
+          </tr>
+          <tr class="header">
+            <th>
+              Двоичных
+            </th>
+            <th>
+              Троичных
+            </th>
+          </tr>
+        </thead>
+        <tbody id="statistics-symbols"></tbody>
+      </table>
+    </div>
+    <div class="statictics">
+      <h4>
+        Статистика
+      </h4>
+      <table class="table table-striped table-condensed table-bordered">
+        <tbody><tr>
+          <th>
+            Количество кодируемых символов
+          </th>
+          <th colspan="2" id="src_symbols_qty"></th>
+        </tr>
+        <tr>
+          <th>
+            Система
+          </th>
+          <td>
+            Двоичная
+          </td>
+          <td>
+            Троичная
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Исходный размер текста
+          </th>
+          <td id="bin_src_size">
+            (символ 8 бит)
+          </td>
+          <td id="tri_src_size">
+            (символ 6 трит)
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Размер закодированного текста
+          </th>
+          <td id="bin_encoded_size"></td>
+          <td id="tri_encoded_size"></td>
+        </tr>
+        <tr>
+          <th>
+            Степень сжатия
+          </th>
+          <td id="bin_ratio"></td>
+          <td id="tri_ratio"></td>
+        </tr>
+      </tbody></table>
+    </div>
+  </div>
+</div>
+
+<script>
+    trinary.ThencoderController.initialize("#encode");
+</script>
+
